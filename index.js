@@ -1,7 +1,7 @@
 //Que.1--Write one example explaining how you can write a callback function 
 
-const hello = (FriendName)=>{
-    return ("hello"+" "+ FriendName)
+const hello = (nameOfFrirnd)=>{
+    return ("hello"+" "+ nameOfFrirnd)
 };
 
 const wishing = (friend,callbackFunction)=>{
@@ -132,14 +132,62 @@ promisefunc("yes").then(()=>{
 
 
 //Que.5--Create examples to explain callback function.
-// it same as explained in question number1.
+function cofee(){
+console.log("jai ho")
+}
+function tea(callback1){
+    console.log("hello this is callback") 
+callback1();
+}
+tea(cofee) 
 
 //Que.6--Create examples to explain callback hell function.
-// it is same as explained in question 2.
+const heading1=document.querySelector("#heading1")
+const heading2=document.querySelector("#heading2")
+const heading3=document.querySelector("#heading3")
+const heading4=document.querySelector("#heading4")
+const heading5=document.querySelector("#heading5")
+
+setTimeout(()=>{
+    heading1.textContent="Pitambar Bhadra";
+    heading1.style.color="brown"
+
+setTimeout(()=>{
+    heading2.textContent="Rahul";
+    heading2.style.color="yellow"
+
+setTimeout(()=>{
+    heading3.textContent="Arvind";
+    heading3.style.color="sienna"
+
+setTimeout(()=>{
+    heading4.textContent="Vijay";
+    heading4.style.color="yellowgreen"
+
+setTimeout(()=>{
+    heading5.textContent="Pushpendra";
+    heading5.style.color="skyblue"
+},3000)
+},2000)
+},2000)
+},3000)
+},5000)
+
 
 //Que.7--Create examples to explain promises function.
-// it is same as explained in question 4.
+let myPromise= new Promise(function(Resolve,Reject){
+let x=6;
 
+if (x==6){
+    Resolve("OK")
+}else{
+    Reject("Error")
+}
+})
+myPromise.then(
+    function(value) {myDisplay(value);},
+)
+console.log(myPromise)
 //Que.8--Create examples to explain async await function
 
 async function asyncAwaitPromises()
