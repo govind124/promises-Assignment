@@ -25,7 +25,7 @@ wishing("Pitambar Bhadra",hello);
 // 7"------->
 
 // const findNumbers = () => {
-//     console.log("Printing the numbers");
+//     console.log("Print all the numbers");
 //      setTimeout(() => {
 //          console.log("1")
 
@@ -113,8 +113,8 @@ wishing("Pitambar Bhadra",hello);
 
 let promisefunc = (arg) =>
 new Promise((Success,Fail)=>{
-    // resolve();
-    // reject();
+    // Success();
+    // Fail();
     if (arg=="yes"){
         return Success();
     }
@@ -144,20 +144,20 @@ promisefunc("yes").then(()=>{
 
 async function asyncAwaitPromises()
 {
-    console.log("Inside the function");
-    const response = await fetch("https://api.github.com/users");
+    console.log("Inside function");
+    const response = await fetch("https://fakestoreapi.com/products");
     console.log("Before response");
     const users = await response.json();
-    console.log("user resolved");
+    console.log("user success");
     return users;
     // it is going to return  a promises 
 }
 
-console.log("Before calling the function");
+console.log("calling the function");
 let data = asyncAwaitPromises();
 console.log("After calling the function ");
 console.log(data);
 data.then((res)=>{
     console.log(res);
 });
-console.log("End of code");
+console.log("Done Code");
