@@ -1,7 +1,7 @@
 //Que.1--Write one example explaining how you can write a callback function 
 
-const hello = (nameOfFrirnd)=>{
-    return ("hello"+" "+ nameOfFrirnd)
+const hello = (FriendName)=>{
+    return ("hello"+" "+ FriendName)
 };
 
 const wishing = (friend,callbackFunction)=>{
