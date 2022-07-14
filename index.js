@@ -1,14 +1,12 @@
 //Que.1--Write one example explaining how you can write a callback function 
 
-const hello = (nameOfFrirnd)=>{
-    return ("hello"+" "+ nameOfFrirnd)
-};
-
-const wishing = (friend,callbackFunction)=>{
-    console.log(callbackFunction(friend));
-};
-
-wishing("Pitambar Bhadra",hello);
+function func(cb){
+    console.log("function 1 doing task 1");
+    cb();
+}
+func(()=>{
+   console.log("function is doing task 2")
+});
 
 //Output-- hello Pitambar Bhadra;
 
